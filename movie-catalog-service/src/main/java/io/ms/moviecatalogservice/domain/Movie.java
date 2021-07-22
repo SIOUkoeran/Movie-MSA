@@ -3,12 +3,26 @@ package io.ms.moviecatalogservice.domain;
 public class Movie {
 
     private String movieId;
+    private String summary;
     private String name;
 
+    public Movie(String movieId, String name, String summary) {
+        this.movieId = movieId;
 
+        this.name = name;
+        this.summary = summary;
+    }
     public Movie(){
 
     }
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
+
     public Movie(String movieId, String name) {
         this.movieId = movieId;
         this.name = name;
